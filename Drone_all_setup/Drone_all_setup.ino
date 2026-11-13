@@ -109,6 +109,8 @@ void loop() {
         Serial.println(F(""));
         Serial.println(F(""));
         Serial.println(F("Move the pitch stick to simulate nose up and back to center"));
+        Serial.printl(F("Move the pitch stick to simulate nose up and back to center"));
+
         check_receiver_inputs(3);
         Serial.print(F("Pitch is connected to digital input "));
         Serial.println((channel_2_assign & 0b00000111) + 7);
