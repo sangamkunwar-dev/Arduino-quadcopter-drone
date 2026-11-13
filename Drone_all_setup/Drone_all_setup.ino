@@ -65,8 +65,8 @@ void loop() {
         Serial.println(F("Place all sticks and subtrims in the center position within 10 seconds"));
         for(int i = 9;i > 0;i--){
             delay(2000);
-            Serialprint(i);
-            Serialprint(" ");
+            Serial.print(i);
+            Serial.print(" ");
         }
         Serial.println(" ");
         center_channel_1 = receiver_input_channel_1;
@@ -109,12 +109,12 @@ void loop() {
         Serial.println(F(""));
         Serial.println(F(""));
         Serial.printl(F("Move the pitch stick to simulate nose up and back to center"));
-        check_receiver_inputes(3);
+        check_receiver_inputs(3);
         Serial.print(F("Pitch is connected to digital input "));
         Serial.println((channel_2_assign & 0b00000111) + 7);
         if(channel_2_assign & 0b10000000)Serial.println(F("Channel inverted = yes"));
         else Serial.println(F("Channel inverted = no"));
-        wait_sticks_zer0();
+        wait_sticks_zero();
     }
     if(error == 0){
         Serial.println(F(""));
@@ -145,7 +145,7 @@ void loop() {
         Serial.print(F("Digital input 09 values:"));
         Serial.print(low_channel_2);
         Serial.print(F(" - "));
-        Seria;.print(center_channel_2);
+        Serial.print(center_channel_2);
         Serial.print(F(" - "));
         Serial.println(high_channel_2);
         Serial.print(F("Digital input 10 values:"));
@@ -182,7 +182,7 @@ void loop() {
             if(search_gyro(0x69, 0x75) == 0x69){
                 Serial.println(F("MPU-6050 found on address 0x69"));
                 type = 1;
-                gyro_addrss = 0x69;
+                gyro_address = 0x69;
             }
         }
         if(type == 0){
