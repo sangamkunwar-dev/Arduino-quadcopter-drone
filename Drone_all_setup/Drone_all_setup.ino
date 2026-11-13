@@ -15,7 +15,7 @@ unsigned long timer_1, timer_2, timer_3, timer_4, current_time;
 float gyro_pitch, gyro_roll, gyro_yaw;
 float gyro_roll_cal, gyro_pitch_cal, gyro_yaw_cal;
 
-vois setup() {
+void setup() {
     pinMode(12, OUTPUT);
     PCICR |= (1 << PCIE0);
     PCMSK0 |= (1 << PCINT0);
