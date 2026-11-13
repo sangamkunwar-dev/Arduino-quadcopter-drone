@@ -71,7 +71,7 @@ void loop() {
         Serial.println(" ");
         center_channel_1 = receiver_input_channel_1;
         center_channel_2 = receiver_input_channel_2;
-        center_channel_3 = reciver_input_channel_3;
+        center_channel_3 = receiver_input_channel_3;
         center_channel_4 = receiver_input_channel_4;
         Serial.println(F(""));
         Serial.println(F("Center positions stored."));
