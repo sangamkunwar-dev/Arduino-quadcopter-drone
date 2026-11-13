@@ -1,6 +1,6 @@
-# Custom Arduino Drone Flight Controller & Setup Utility
+# Arduino Drone Flight Controller & Setup Utility
 
-
+A custom-built C++ firmware and interactive setup utility designed for an Arduino Uno-based quadcopter. This project handles low-level hardware interrupts for radio receiver signal processing, communication with an MPU-6050 gyroscope over I2C at 400kHz, guides the pilot through stick calibration,and saves all configuration data securely to the EEPROM.
 ---
 
 ## Tech Stack & Hardware
